@@ -28,14 +28,11 @@ export default function Employees() {
     for (const review of payload.reviews) {
       if (!review.review_text) return;
 
-      const splittedComment = review.review_text.toUpperCase().split(" ");
+      const comment = review.review_text.toUpperCase();
 
       for (const employee of payload.employees) {
         const employeeKey = employee.toUpperCase();
-        const employeeMatched = splittedComment.some(
-          (word) =>
-            stringSimilarity.compareTwoStrings(employeeKey, word) >= 0.85
-        );
+        const employeeMatched = comment.includes(employeeKey);
 
         if (employeeMatched) {
           const employeeStars = map.get(employeeKey) || 0;
