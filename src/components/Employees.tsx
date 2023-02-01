@@ -22,16 +22,28 @@ export default function Employees() {
 
   const countEmployeesPoints = (payload: Payload) => {
     const map = new Map(
-      payload.employees.map((employee) => [employee.toUpperCase(), 0])
+      payload.employees.map((employee) => [
+        employee
+          .toLocaleUpperCase()
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, ""),
+        0,
+      ])
     );
 
     for (const review of payload.reviews) {
       if (!review.review_text) return;
 
-      const comment = review.review_text.toUpperCase();
+      const comment = review.review_text
+        .toLocaleUpperCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
 
       for (const employee of payload.employees) {
-        const employeeKey = employee.toUpperCase();
+        const employeeKey = employee
+          .toLocaleUpperCase()
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "");
         const employeeMatched = comment.includes(employeeKey);
 
         if (employeeMatched) {
