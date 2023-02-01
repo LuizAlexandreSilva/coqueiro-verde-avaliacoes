@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/coqueiro-verde-avaliacoes/static/css/main.85768c17.css",
-    "main.js": "/coqueiro-verde-avaliacoes/static/js/main.f395abbd.js",
+    "main.js": "/coqueiro-verde-avaliacoes/static/js/main.d27c2f19.js",
     "static/js/787.2e1b81e1.chunk.js": "/coqueiro-verde-avaliacoes/static/js/787.2e1b81e1.chunk.js",
     "index.html": "/coqueiro-verde-avaliacoes/index.html",
     "main.85768c17.css.map": "/coqueiro-verde-avaliacoes/static/css/main.85768c17.css.map",
-    "main.f395abbd.js.map": "/coqueiro-verde-avaliacoes/static/js/main.f395abbd.js.map",
+    "main.d27c2f19.js.map": "/coqueiro-verde-avaliacoes/static/js/main.d27c2f19.js.map",
     "787.2e1b81e1.chunk.js.map": "/coqueiro-verde-avaliacoes/static/js/787.2e1b81e1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.85768c17.css",
-    "static/js/main.f395abbd.js"
+    "static/js/main.d27c2f19.js"
   ]
 }
